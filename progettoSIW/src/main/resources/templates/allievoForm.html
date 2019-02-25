@@ -1,0 +1,154 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Inserisci Allievo</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/assets/css/main.css" />
+</head>
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header">
+		<nav class="left">
+			<a href="#menu"><span>Menu</span></a>
+		</nav>
+		<a th:href="@{/index}" class="logo">azienda!</a>
+		<nav class="right">
+			<a th:href="@{/logout}" class="button alt">Esci</a>
+		</nav>
+	</header>
+
+	<!-- Menu -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a th:href="@{/index}">Home</a></li>
+			<li><a th:href="@{/addAllievo}">Inserisci Allievi</a></li>
+			<li><a th:href="@{/addAttivita}">Inserisci Attività</a></li>
+			<li><a th:href="@{/allievi}">Allievi</a></li>
+			<li><a th:href="@{/attivitas}">Attività</a></li>
+			<li><a th:href="@{/iscrivi}">Iscrivi Allievo</a></li>
+			<li><a th:href="@{/registra}">Registra Utente</a></li>
+		</ul>
+
+	</nav>
+
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h1>Inserisci Allievo</h1>
+				<p>Tutti i campi sono obbligatori</p>
+			</header>
+
+			<div align="center">
+				<p th:text="${exists}"></p>
+			</div>
+			<form th:action="@{/allievo}" method="POST" th:object="${allievo}">
+				<table>
+					<tr>
+						<td>Nome:</td>
+						<td><input type="text" th:field="*{nome}" placeholder="Nome" /></td>
+						<td th:if="${#fields.hasErrors('nome')}" th:errors="*{nome}"></td>
+					</tr>
+					<tr>
+						<td>Cognome:</td>
+						<td><input type="text" th:field="*{cognome}"
+							placeholder="Cognome" /></td>
+						<td th:if="${#fields.hasErrors('cognome')}" th:errors="*{cognome}"></td>
+					</tr>
+					<tr>
+						<td>Email:</td>
+						<td><input type="text" th:field="*{email}"
+							placeholder="nomeutente@dominio.it" /></td>
+						<td th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></td>
+					</tr>
+					<tr>
+						<td>Telefono:</td>
+						<td><input type="text" th:field="*{tel}" placeholder="+39" /></td>
+						<td th:if="${#fields.hasErrors('tel')}" th:errors="*{tel}"></td>
+					</tr>
+
+					<tr>
+						<td>Data di nascita:</td>
+						<td><input type="text" th:field="*{dataNascita}"
+							placeholder="dd-MM-yyyy" /></td>
+						<td th:if="${#fields.hasErrors('dataNascita')}"
+							th:errors="*{dataNascita}"></td>
+					</tr>
+
+					<tr>
+						<td>Città:</td>
+						<td><input type="text" th:field="*{citta}"
+							placeholder="Città" /></td>
+						<td th:if="${#fields.hasErrors('citta')}" th:errors="*{citta}"></td>
+					</tr>
+
+				</table>
+
+				<div>
+					<div align="center">
+						<button type="submit">Invio</button>
+						<button type="reset">Reimposta</button>
+					</div>
+				</div>
+
+
+			</form>
+
+
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<h2>Cerchi un'azienda per gestire i tuoi centri di formazione?</h2>
+			<h3>Contattaci!</h3>
+			<ul class="actions">
+				<li><span class="icon fa-phone"></span> <a href="#">(000)
+						000-0000</a></li>
+				<li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
+				<li><span class="icon fa-map-marker"></span> 123 Somewhere
+					Road, Nashville, TN 00000</li>
+			</ul>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span
+						class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span
+						class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span
+						class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			&copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>.
+			Images <a href="https://unsplash.com">Unsplash</a>.
+		</div>
+		<div>
+			<cite class="author">Simone Rossetti</cite> <cite class="company">CEO,
+				Untitled</cite>
+		</div>
+
+
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

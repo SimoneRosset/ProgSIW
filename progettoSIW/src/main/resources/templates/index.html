@@ -1,0 +1,185 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns:tiles="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+<head>
+<title>Azienda!</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/assets/css/main.css" />
+</head>
+<body>
+
+	<!-- Header -->
+	<header id="header">
+		<nav class="left">
+			<a href="#menu"><span>Menu</span></a>
+		</nav>
+		<a th:href="@{/index}" class="logo">azienda!</a>
+		<nav class="right">
+			<a th:href="@{/logout}" class="button alt">Esci</a>
+		</nav>
+	</header>
+
+	<!-- Menu -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a th:href="@{/index}">Home</a></li>
+			<li><a th:href="@{/addAllievo}">Inserisci Allievi</a></li>
+			<li><a th:href="@{/addAttivita}">Inserisci Attività</a></li>
+			<li><a th:href="@{/allievi}">Allievi</a></li>
+			<li><a th:href="@{/attivitas}">Attività</a></li>
+			<li><a th:href="@{/iscrivi}">Iscrivi Allievo</a></li>
+			<li><a th:href="@{/registra}">Registra Utente</a></li>
+
+		</ul>
+
+	</nav>
+
+	<!-- Banner -->
+	<section id="banner">
+		<div class="content">
+			<h1>Azienda!</h1>
+			<p>Gestiamo i tuoi centri di formazione.</p>
+			<ul class="actions">
+				<li><a href="#one" class="button scrolly">Inizia</a></li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- One -->
+	<section id="one" class="wrapper">
+		<div class="inner flex flex-3">
+			<div class="flex-item box">
+				<div class="image fit">
+					<img src="images/pic02.jpg" alt="" />
+				</div>
+				<div class="content" align="center">
+					<h2>
+						<a th:href="@{/allievi}">Allievi</a>
+					</h2>
+					<p>Scopri quante persone frequentano già i centri di
+						formazione.</p>
+				</div>
+			</div>
+			<div class="flex-item box" >
+				<div class="image fit">
+					<img src="images/pic01.jpg" alt="" />
+				</div>
+				<div class="content" align="center">
+					<h2>
+						<a th:href="@{/registra}">Registra Utente</a>
+					</h2>
+					<p>Inserisci un nuovo utente nel sistema.</p>
+				</div>
+			</div>
+			<div class="flex-item box">
+				<div class="image fit">
+					<img src="images/pic03.jpg" alt="" />
+				</div>
+				<div class="content" align="center">
+					<h2>
+						<a th:href="@{/attivitas}">Attività</a>
+					</h2>
+					<p>Scopri quali attività abbiamo scelto per te.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Two -->
+	<section id="two" class="wrapper style1 special">
+		<div class="inner">
+			<h2>Gestisci i tuoi dati con un click dal menu laterale!</h2>
+			<figure>
+				<ul class="actions">
+					<li><a href="#menu" class="button alt scrolly">Inizia</a></li>
+				</ul>
+
+			</figure>
+		</div>
+	</section>
+
+
+
+	<!-- Three -->
+	<section id="three" class="wrapper">
+		<div class="inner flex flex-3">
+			<div class="flex-item left">
+				<div>
+					<h3>Veloce</h3>
+					<p>Il sito più veloce in assoluto!</p>
+				</div>
+				<div>
+					<h3>Sicuro</h3>
+					<p>I tuoi dati sicuri.</p>
+				</div>
+			</div>
+			<div class="flex-item image fit round">
+				<img src="images/pic01.jpg" alt="" />
+			</div>
+			<div class="flex-item right">
+				<div>
+					<h3>Affidabile</h3>
+					<p>Accedi in qualsiasi momento!</p>
+				</div>
+				<div>
+					<h3>Semplice</h3>
+					<p>Facile da gestire.</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<h2>Cerchi un'azienda per gestire i tuoi centri di formazione?</h2>
+			<h3>Contattaci!</h3>
+			<ul class="actions">
+				<li><span class="icon fa-phone"></span> <a href="#">(000)
+						000-0000</a></li>
+				<li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
+				<li><span class="icon fa-map-marker"></span> 123 Somewhere
+					Road, Nashville, TN 00000</li>
+			</ul>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span
+						class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span
+						class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span
+						class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			&copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>.
+			Images <a href="https://unsplash.com">Unsplash</a>.
+		</div>
+		<div>
+			<cite class="author">Simone Rossetti</cite> <cite class="company">CEO,
+				Untitled</cite>
+		</div>
+
+
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>

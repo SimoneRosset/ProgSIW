@@ -1,0 +1,124 @@
+<!DOCTYPE HTML>
+<!--
+	Intensify by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
+<html xmlns:th="http://www.thymeleaf.org"
+	xmlns="http://www.w3.org/1999/html">
+<head>
+<title>Attività</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="stylesheet" type="text/css" media="all"
+	href="/assets/css/main.css" />
+</head>
+<body class="subpage">
+
+	<!-- Header -->
+	<header id="header">
+		<nav class="left">
+			<a href="#menu"><span>Menu</span></a>
+		</nav>
+		<a th:href="@{/index}" class="logo">azienda!</a>
+		<nav class="right">
+			<a th:href="@{/logout}" class="button alt">Esci</a>
+		</nav>
+	</header>
+
+	<!-- Menu -->
+	<nav id="menu">
+		<ul class="links">
+			<li><a th:href="@{/index}">Home</a></li>
+			<li><a th:href="@{/addAllievo}">Inserisci Allievi</a></li>
+			<li><a th:href="@{/addAttivita}">Inserisci Attività</a></li>
+			<li><a th:href="@{/allievi}">Allievi</a></li>
+			<li><a th:href="@{/attivitas}">Attività</a></li>
+			<li><a th:href="@{/iscrivi}">Iscrivi Allievo</a></li>
+			<li><a th:href="@{/registra}">Registra Utente</a></li>
+		</ul>
+
+	</nav>
+
+	<!-- Main -->
+	<section id="main" class="wrapper">
+		<div class="inner">
+			<header class="align-center">
+				<h1>Attività</h1>
+				<p>Scopri quali attività sono state scelte per te!</p>
+			</header>
+			<div class="image fit">
+				<img src="images/pic03.jpg" alt="" />
+			</div>
+			<div align="center">
+				<h4>Attività</h4>
+				<div align="center">
+					<table class="alt">
+						<thead>
+							<tr>
+								<th>Name</th>
+								<th>Data</th>
+								<th>Orario</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr th:each="attivita : ${attivitas}">
+								<td><a th:href="@{'/attivita' + '/' + ${attivita.id}}"><span
+										th:text="${attivita.nome}"></span></a></td>
+								<td><a th:href="@{'/attivita' + '/' + ${attivita.id}}"><span
+										th:text="${attivita.data}"></span></a></td>
+								<td><a th:href="@{'/attivita' + '/' + ${attivita.id}}"><span
+										th:text="${attivita.orario}"></span></a></td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<h2>Cerchi un'azienda per gestire i tuoi centri di formazione?</h2>
+			<h3>Contattaci!</h3>
+			<ul class="actions">
+				<li><span class="icon fa-phone"></span> <a href="#">(000)
+						000-0000</a></li>
+				<li><span class="icon fa-envelope"></span> <a href="#">information@untitled.tld</a></li>
+				<li><span class="icon fa-map-marker"></span> 123 Somewhere
+					Road, Nashville, TN 00000</li>
+			</ul>
+			<ul class="icons">
+				<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+				<li><a href="#" class="icon fa-facebook"><span
+						class="label">Facebook</span></a></li>
+				<li><a href="#" class="icon fa-instagram"><span
+						class="label">Instagram</span></a></li>
+				<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+				<li><a href="#" class="icon fa-dribbble"><span
+						class="label">Dribbble</span></a></li>
+				<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+			</ul>
+		</div>
+		<div class="copyright">
+			&copy; Untitled. Design <a href="https://templated.co">TEMPLATED</a>.
+			Images <a href="https://unsplash.com">Unsplash</a>.
+		</div>
+		<div>
+			<cite class="author">Simone Rossetti</cite> <cite class="company">CEO,
+				Untitled</cite>
+		</div>
+
+
+	</footer>
+
+	<!-- Scripts -->
+	<script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/skel.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="assets/js/main.js"></script>
+
+</body>
+</html>
