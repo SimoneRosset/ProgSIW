@@ -1,0 +1,136 @@
+1.Effettua il login
+PORTATA: 
+Software di un’azienda che gestisce un insieme di centri di formazione
+LIVELLO: 
+Utente
+SOGGETTO: 
+Responsabile del centro di formazione
+OBBIETTIVO:
+Responsabile: Vuole accedere al sistema per poter effettuare un’operazione di gestione.
+POSTCONDIZIONI:
+Username e password autenticati dal sistema.
+SUCCESSO:
+1.Collegamento al sistema per la gestione di centri di formazione
+2.Inserimento credenziali (username e password).
+3.Riconoscimento credenziali.
+4.Accesso al sistema.
+ESTENSIONI:
+Il Sistema non riconosce il responsabile del centro:
+1.Il responsabile del centro ritorna alla schermata iniziale di Login.
+2.Il responsabile del centro inserisce di nuovo le proprie credenziali.
+FREQUENZA DI RIPETIZIONE: 
+Ogni qualvolta il suddetto responsabile del centro vuole accedere al sistema.
+
+=======================================================================================
+
+2.Inserimento Nuova Attività
+PORTATA: 
+Software di un’azienda che gestisce un insieme di centri di formazione
+LIVELLO: 
+Utente
+SOGGETTO: 
+Responsabile del centro
+OBBIETTIVO:
+Responsabile: Vuole accedere al sistema per poter aggiungere un’attività.
+PRECONDIZIONI: 
+Accesso avvenuto.
+POSTCONDIZIONI: 
+memorizzazione di una nuova attività nel sistema.
+SUCCESSO:
+1. Seleziona l’opzione offerta dal sistema di inserire una nuova attività.
+2. Inserisce il nome, la data e l’orario previsti per la suddetta attività.
+3. Conferma l’inserimento della nuova attività.
+4. Il sistema registra tale attività.
+ESTENSIONI:
+Il Sistema informa il Responsabile del Centro che una tale Attività è già esistente.
+FREQUENZA DI RIPETIZIONE: 
+Ogni qualvolta il suddetto responsabile del centro vuole registrare un’attività.
+
+=======================================================================================
+
+3.Inserisci Nuovo Alliev
+PORTATA: 
+Software di un’azienda che gestisce un insieme di centri di formazione
+LIVELLO: 
+Utente
+SOGGETTO: 
+Responsabile del centro
+ATTORE FINALE: 
+Allievo
+OBBIETTIVO:
+Responsabile: Vuole registrare i dati anagrafici del nuovo allievo in modo persistente.
+PRECONDIZIONI: 
+L'allievo non ha mai partecipato ad alcuna attività all'interno del centro.
+POSTCONDIZIONI: 
+memorizzazione di un nuovo allievo nel sistema.
+SUCCESSO:
+1.Un nuovo allievo vuole partecipare ad una delle attività del giorno.
+2.Il responsabile del centro inserisce i dati anagrafici del nuovo allievo.
+3.Il responsabile del centro conferma l’inserimento.
+4.L’allievo è iscritto al suddetto centro e alla suddetta attività.
+ESTENSIONI:  
+Il Sistema informa che esiste già un allievo con quei dati anagrafici:		
+1.Il responsabile del centro annulla l'inserimento.
+2.Il responsabile del centro ha sbagliato ad inserire un dato e ricomincia.
+FREQUENZA DI RIPETIZIONE: 
+Ogni qualvolta il suddetto responsabile del centro vuole registrare un allievo.
+
+=======================================================================================
+
+4. Iscrivi Allievo ad Attività
+PORTATA: 
+Software di un’azienda che gestisce un insieme di centri di formazione
+LIVELLO: 
+Utente
+SOGGETTO: 
+Responsabile del centro
+ATTORE FINALE:
+Allievo
+OBBIETTIVO:
+Responsabile: vuole iscrivere un allievo ad un’attività.
+PRECONDIZIONI: 
+L'allievo è già iscritto al centro e inserito nel sistema.
+POSTCONDIZIONI: 
+iscrizione di un allievo ad un’attività.
+SUCCESSO:
+1.Un Allievo vuole partecipare ad una delle attività.
+2.Il responsabile del centro recupera i dati del suddetto allievo dal sistema.
+3.Il responsabile del centro recupera i dati dell’attività richiesta.
+4.Il sistema mostra i dati dell’attività al responsabile del centro.
+5.Il Responsabile del centro iscrive il suddetto allievo all’attività appena recuperata.
+6.Il Sistema salva l’allievo tra gli allievi iscritti alla stessa attività.
+ESTENSIONI:		
+Il sistema non trova alcun allievo con i dati inseriti:		
+1.Il Responsabile del Centro passa all’iscrizione.
+2.Il Responsabile del Centro ha sbagliato ad inserire un dato e ricomincia.
+Il Sistema non trova alcuna Attività con i dati inseriti:
+1.Il Responsabile del Centro comunica all’Allievo che non esiste nessuna Attività con quei dati.
+2.Il Responsabile del Centro ha sbagliato ad inserire un dato e ricomincia.   
+FREQUENZA DI RIPETIZIONE: 
+Ogni qualvolta il suddetto responsabile del centro vuole registrare un allievo ad un’attività.
+
+=======================================================================================
+
+5.Visualizza Dati
+PORTATA: 
+Software di un’azienda che gestisce un insieme di centri di formazione
+LIVELLO: 
+Utente
+SOGGETTO:
+Responsabile del centro
+OBBIETTIVO:
+Responsabile: vuole visualizzare i dati relativi al suo centro, come le attività organizzare o gli allievi iscritti.
+PRECONDIZIONI:
+Accesso al sistema.
+POSTCONDIZIONI:
+Visualizzazione dati sistema.
+SUCCESSO:
+1.Il responsabile del centro seleziona di visualizzare i dati.
+2.Il sistema mostra al responsabile del centro i dati del centro interessato.
+3.Il responsabile del centro ottiene la visualizzazione dei dati che stava cercando.
+ESTENSIONI:		
+Il sistema fallisce e in qualunque momento il responsabile riavvia il sistema
+FREQUENZA DI RIPETIZIONE: 
+Ogni qualvolta il suddetto responsabile vuole visualizzare i dati del sistema.
+
+
