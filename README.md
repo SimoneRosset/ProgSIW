@@ -1,7 +1,7 @@
-## Azienda!
+# Azienda!
 All'interno il programma, cinque casi d'uso (UC) e il diagramma delle classi (CD).
 
-# Descrizione: 
+## Descrizione: 
 E' stato realizzato il sistema informativo di una azienda che gestisce un insieme di centri di formazione.
 Ogni centro organizza attività giornaliere di formazione.
 Ogni centro ha un nome, un indirizzo, un email, un telefono ed una capienza massima di allievi.
@@ -10,8 +10,8 @@ Gli allievi si presentano al centro e si iscrivono per partecipare alle attivit�
 Ogni centro ha la possibilità di visualizzare solo i dati relativi alle proprie attività.
 L’azienda ha invece la possibilità di vedere i dati di tutti i centri, aggregandoli in maniera opportuna.
 
-# Linguaggi e API:
+## Linguaggi e API:
 Java, HTML, CSS, JPA, Servlet, JSP, Spring, OAuth
 
-# Server e Database:
+## Server e Database:
 Apache Tomcat, PostgreSQL (pgAdmin)
